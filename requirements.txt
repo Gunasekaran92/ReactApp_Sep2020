@@ -1,5 +1,4 @@
 flask
 pandas
 sklearn
-pickle
 numpy
