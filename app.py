@@ -12,8 +12,8 @@ model4 = pickle.load(open( "f4.sav", "rb"))
 
 
 app = Flask(__name__)
-app.config['CORS_HEADERS'] = 'Content-Type'
-cors = CORS(app)
+#app.config['CORS_HEADERS'] = 'Content-Type'
+#cors = CORS(app)
 @app.errorhandler(404)
 
 def not_found(error):
