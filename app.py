@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, make_response, request, abort
 import pandas as pd
-import catboost
 import pickle
 from flask_cors import CORS,cross_origin
 model = pickle.load(open( "finalized_model.sav", "rb"))
