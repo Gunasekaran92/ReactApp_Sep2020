@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, make_response, request, abort
 import pandas as pd
 import pickle
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import LabelEncoder
 #from flask_cors import CORS,cross_origin
 model = pickle.load(open( "finalized_model.sav", "rb"))
 
