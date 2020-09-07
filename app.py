@@ -26,7 +26,7 @@ def hello():
     return "Hello World!"
 
 @app.route("/get_prediction", methods=['POST','OPTIONS'])
-@cross_origin()
+#@cross_origin()
 def get_prediction():
 	if not request.json:
 		abort(400)
