@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 model = pickle.load(open( "finalized_model.sav", "rb"))
 
 
-model1 = pickle.load(open( "fl.sav", "rb"))
+model1 = pickle.load(open( "f1.sav", "rb"))
 model2 = pickle.load(open( "f2.sav", "rb"))
 model3 = pickle.load(open( "f3.sav", "rb"))
 model4 = pickle.load(open( "f4.sav", "rb"))
