@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import LabelEncoder
-#from flask_cors import CORS,cross_origin
+from flask_cors import CORS,cross_origin
 model = pickle.load(open( "finalized_model.sav", "rb"))
 
 
@@ -14,8 +14,8 @@ model4 = pickle.load(open( "f4.sav", "rb"))
 
 
 app = Flask(__name__)
-#app.config['CORS_HEADERS'] = 'Content-Type'
-#cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+cors = CORS(app)
 @app.errorhandler(404)
 
 def not_found(error):
@@ -26,7 +26,7 @@ def hello():
     return "Hello World!"
 
 @app.route("/get_prediction", methods=['POST','OPTIONS'])
-#@cross_origin()
+@cross_origin()
 def get_prediction():
 	if not request.json:
 		abort(400)
